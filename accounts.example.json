@@ -1,0 +1,16 @@
+[{
+	"label": "My personal debit account",
+	"type": "checkings",
+	"owners": ["01x5","52x8"],
+	"iban": "BE62510007547061",
+	"moneyAmount":1000,
+	"currency": "EUR"
+},
+{
+	"label": "My personal savings account",
+	"type": "savings",
+	"owners": ["01x5"],
+	"iban": "BE62510007547062",
+	"moneyAmount":1000,
+	"currency": "EUR"
+}]
