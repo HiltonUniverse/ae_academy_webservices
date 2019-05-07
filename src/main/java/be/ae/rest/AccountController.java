@@ -1,6 +1,8 @@
 package be.ae.rest;
 
 import be.ae.rest.model.Account;
+import be.ae.services.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,9 +10,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 /**
@@ -22,13 +22,15 @@ import java.util.Random;
 @RequestMapping("/api/accounts")
 public class AccountController {
 
+    @Autowired
+    private AccountService accountService;
+
     /**
      * Get list of accounts
      */
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Account>> getAccounts() {
-        //TODO Get accounts
-        return ResponseEntity.ok( new ArrayList<>());
+        return ResponseEntity.ok(accountService.getAccounts());
     }
 
     /**
@@ -36,8 +38,8 @@ public class AccountController {
      */
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createAccount(@Valid @RequestBody Account account) {
-        //TODO Create account
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(new Random().nextInt()).toUri();
+        final String id = accountService.create(account);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
         return ResponseEntity.created(location).build();
     }
 
@@ -46,8 +48,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/{accountId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Account> getAccountById(@PathVariable String accountId) {
-        //TODO Get account
-        return ResponseEntity.ok(new Account());
+        return ResponseEntity.ok(accountService.get(accountId));
     }
 
     /**
@@ -55,7 +56,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/{accountId}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> deleteAccountById(@PathVariable String accountId) {
-        //TODO Delete account
+        accountService.delete(accountId);
         return ResponseEntity.noContent().build();
     }
 }
