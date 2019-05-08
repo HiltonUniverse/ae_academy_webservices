@@ -2,7 +2,7 @@
 
 ## Installation
 
-Shouldn't you have done the installation already? Otherwise you can check [following manual](installation_cookbook.md).
+Shouldn't you have done the installation already? Otherwise you can check [following manual](installation_cookbook.pdf).
 
 ## API
 [Milestone 1](api_milestone_1.md)
