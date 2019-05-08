@@ -10,7 +10,7 @@
          In this layer we can implement our business logic
    3. Create the different service and repository objects in the correct packages to obtain a layered structure
 
-![Image 5](img5.png "Image 5")
+![Image 5](img/code_img_5.png "Image 5")
 
 
    4. Adapt the AccountController so that you can reference the AccountService in the controller. (Hint: Use CDI via direct field injection)
