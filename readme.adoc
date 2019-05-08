@@ -6,7 +6,7 @@ Shouldn't you have done the installation already? Otherwise you can check includ
 
 ## Coding
 
-include::1_milestone_1.adoc[Milestone 1]
-include::2_milestone_2.adoc[Milestone 2]
-include::3_milestone_3.adoc[Milestone 3]
-include::4_milestone_4.adoc[Milestone 4]
+include::1_milestone_1.adoc[Milestone_1]
+include::2_milestone_2.adoc[Milestone_2]
+include::3_milestone_3.adoc[Milestone_3]
+include::4_milestone_4.adoc[Milestone_4]
