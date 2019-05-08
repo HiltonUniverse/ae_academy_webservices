@@ -76,6 +76,6 @@ target
 
 10. Deploy your application to heroku and watch the magic happen by using this command:
 ```
-heroku create
+heroku create --buildpack heroku/java
 git push heroku master
 ```
