@@ -1,5 +1,7 @@
 # API Milestone 1
 
+![Image 1](../master/img/api_img_1.png "Image 1")
+
 Create json schema and example json file for the following information model, both for 1 account and a list of accounts. We should end up with 4 files:
 * account.schema.json
 * accounts.schema.json
