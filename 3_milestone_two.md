@@ -25,4 +25,5 @@
 ```
 
    4. More info can be found here: [tutorial](http://spring.io/guides/tutorials/bookmarks/#_building_a_rest_service)
+---
 2. **What status code will be returned on the GET and POST operation?**
