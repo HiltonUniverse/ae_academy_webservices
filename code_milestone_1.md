@@ -48,11 +48,11 @@ mvn spring-boot:run
 
 6. If everything went well you should see:
 
-![Image 1](img1.png "Image 1")
+![Image 1](img/code_img_1.png "Image 1")
 
 7. Put all your RAML files in following package:
 
-![Image 2](img2.png "Image 2")
+![Image 2](img/code_img_2.png "Image 2")
 
 8. Add following plugin to your build step of your pom.xml file:
 
@@ -100,4 +100,4 @@ mvn spring-boot:run
 12. Check if the java files are correctly generated
 13. Copy the previously generated code in the src/main/java package
 
-![Image 3](img3.png "Image 3")
+![Image 3](img/code_img_3.png "Image 3")
