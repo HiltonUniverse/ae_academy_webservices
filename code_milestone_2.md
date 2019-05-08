@@ -11,7 +11,7 @@
    3. POST returns a ResponseEntity with a valid statuscode
       1. User should also receive the address location 
       
-      ![Image 4](img4.png "Image 4")
+      ![Image 4](img/code_img_4.png "Image 4")
 
       2. Use a JSON body when testing your operation
       3. Body: 
